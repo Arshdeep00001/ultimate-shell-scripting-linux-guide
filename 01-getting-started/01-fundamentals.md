@@ -1,3 +1,9 @@
+# What is an OS ?
+- OS is a special software program that knows how to use the hardware.
+
+# Why do we need an OS ?
+- Users (Eg. for creating files and folders, managing the hardware resources, checking status of CPU etc.) and Applications/Programs (to get CPU, memory & disk space allocation etc) can interact with the Hardware components of the system using an OS. 
+
 # Linux over Windows
 
 ### Cost-Effectiveness
