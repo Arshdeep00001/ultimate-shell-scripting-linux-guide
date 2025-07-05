@@ -60,6 +60,8 @@ sudo apt upgrade -y
 ## 🛠 Essential Package Manager Commands
 ### **APT (Debian, Ubuntu)**
 ```bash
+sudo apt list           # list all the installed packages
+sudo apt list | head    # list first 10 installed packages from the list
 sudo apt update         # Update package lists
 sudo apt upgrade -y     # Upgrade installed packages
 sudo apt install nginx  # Install a package
