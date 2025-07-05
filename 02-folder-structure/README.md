@@ -40,3 +40,8 @@
 | `/mnt` | Temporary mount point for external filesystems. |
 | `/media` | Mount point for removable media (USB, CDs). |
 | `/data` | Likely your **mounted volume** from Windows (`C:/ubuntu-data`). |
+
+### **Additional Commands**
+echo $PATH                  # to print all the listed paths
+root@ubuntu_dev:/#          # root is the user, ubuntu_dev is the hostname, : is a separator, / is the path or present working directory, '#' is a separator
+ubuntu@ip-172-31-87:~$      # ubuntu is the user, ip-172-31-87 is the hostname, : is a separator, ~ is the path or present working directory, $ is a separator
