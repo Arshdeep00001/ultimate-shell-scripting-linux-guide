@@ -34,6 +34,14 @@ adduser username
 ```
 This is an interactive command that asks for a password and additional details.
 
+### Interview Question: Q1. Diff b/w useradd and adduser.
+A. 'adduser' creates a user with a home directory and takes a lot of user information.
+'useradd' is a quick way of creating users which doesn't ask for any other details and doesnt create any home directory. It is useful for writting shell scripts where we don't want the command to prompt inputs.
+
+### Q2. Can we decript/restore the password of a linux user ?
+A. No, because the password has been created with strong hashing and cannot be decripted by any way.
+ 
+
 ## Managing User Passwords
 To set or change a user’s password:
 ```bash
