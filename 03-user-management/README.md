@@ -48,6 +48,9 @@ To set or change a user’s password:
 passwd username
 ```
 
+### To switch to another user
+su username
+
 ### Enforcing Password Policies
 - **Password expiration**: Set password expiry days
   ```bash
@@ -128,3 +131,19 @@ Then add:
 ```bash
 username ALL=(ALL) NOPASSWD: /path/to/command
 ```
+
+### To login to a Remote Server using SSH
+Open an SSH Client such as gitbash, Putty or terminal etc.
+ssh username@ip_adress
+enter password
+
+Some organisations allow login for users without entering password by-default. This is done by defining 'PasswordAuthentication' as No in the below file location.
+cat etc/ssh/sshd_config.d/60-cloudimg-settings.config
+
+We can we even make it to yes to enable entering password for users to login, and then we can apply the changes using:
+sudo systemctl restart ssh
+
+If PasswordAuthentication is disabled, we need to login using .pem file.
+
+### To verify the Linux Instance
+uname -a
