@@ -7,18 +7,18 @@
 
 ---
 
-### Basic Navigation
+### Basic Navigation in Normal Mode
 - `h` – Move **left**  
 - `l` – Move **right**  
 - `j` – Move **down**  
 - `k` – Move **up**  
 - `0` – Move to the **beginning** of the line  
 - `^` – Move to the **first non-blank** character of the line  
-- `$` – Move to the **end** of the line  
-- `w` – Move to the **next word**  
-- `b` – Move to the **previous word**  
+- `Shift+$` – Move to the **end** of the line  
+- `w or Ctrl+arrow_next` – Move to the **next word**  
+- `b or Ctrl+arrow_previous` – Move to the **previous word**  
 - `gg` – Move to the **start** of the file  
-- `G` – Move to the **end** of the file  
+- `Shift+G` – Move to the **end** of the file  
 - `:n` – Move to **line number `n`**  
 
 ---
@@ -34,7 +34,7 @@
 
 ---
 
-### Editing Text
+### Editing Text in Normal Mode
 - `x` – Delete a **character**  
 - `X` – Delete a **character before cursor**  
 - `dw` – Delete a **word**  
