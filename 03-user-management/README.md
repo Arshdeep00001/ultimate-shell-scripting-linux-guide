@@ -49,7 +49,9 @@ passwd username
 ```
 
 ### To switch to another user
-su username
+```bash
+su - username
+```
 
 ### Enforcing Password Policies
 - **Password expiration**: Set password expiry days
