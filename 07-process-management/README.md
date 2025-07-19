@@ -1,12 +1,16 @@
 # Process Management in Linux
 
 ## Introduction to Process Management
-A process is an instance of a running program. Linux provides multiple utilities to monitor, manage, and control processes effectively. Each process has a unique **Process ID (PID)** and belongs to a parent process.
+A process is an instance of a running program. Linux provides multiple utilities to monitor, manage, and control processes effectively. Each process has a unique **Process ID (PID)** and belongs to a parent process. Eg. a running Python Application or a running web/application server or executing a shell script is a process.
 
 ## Index of Commands Covered
 
 ### Viewing Processes
-- `ps aux` – View all running processes
+- `ps aux` – View all running processes (it also shows CPU and Memory utilisation)
+- `ps` – View processes
+- `ps aux | nl` – View all running processes along with a line number
+- `ps aux | wc -l` – to get a word count of all the running processes
+- `ps -ef` – View all running processes (it shows CPU utilisation but doesn't show Memory utilisation)
 - `ps -u username` – View processes for a specific user
 - `ps -C processname` – Show a process by name
 - `pgrep processname` – Find a process by name and return its PID
