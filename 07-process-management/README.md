@@ -6,7 +6,7 @@ A process is an instance of a running program. Linux provides multiple utilities
 ## Index of Commands Covered
 
 ### Viewing Processes
-- `ps aux` – View all running processes (it also shows CPU and Memory utilisation)
+- `ps aux` – View all running processes (it also shows CPU and Memory utilisation).
 Output :- User - who initiates/triggers the process.
 PID - every process has a unique Process ID, to identify the process and take any action on it.
 %CPU - CPU utilisation
@@ -18,7 +18,7 @@ COMMAND - with which command the process has started
 - `ps aux | nl` – View all running processes along with a line number
 - `ps aux | wc -l` – to get a word count of all the running processes
 - `ps -ef` – View all running processes (it shows CPU utilisation but doesn't show Memory utilisation)
-- `ps aux | grep java` – to search for a process running Java (or you can mention any other keyword you wish to search)
+- `ps aux | grep java` – to search for a process running Java (or you can mention any other keyword you wish to search).
 The above command will show atleast one line output which will show the process for the above command with java keyword even if there is no process that is running java. So, to avoid that, we can use the below command
 - `ps aux | grep java | grep -v grep` – here -v grep removes the grep word. -v is used to remove/ignore something
  
@@ -28,7 +28,7 @@ The above command will show atleast one line output which will show the process 
 - `pidof processname` – Find the PID of a running program
 
 ### Managing Processes
-- `kill PID` – Terminate a process by PID
+- `kill PID` – Terminate a process by PID.
 Q. Why do we kill a process ?
 A. When a heavy application or a process consumes a lot of CPU and Memory resources such that it slows the working of the other processes or hangs the entire system, then we need to kill that particular process.
 
@@ -36,12 +36,13 @@ A. When a heavy application or a process consumes a lot of CPU and Memory resour
 - `kill -9 PID` – Force kill a process (this is used when even after killing a process using `kill PID` the process doesn't get killed)
 - `pkill -9 processname` – Kill all instances of a process
 - `kill -STOP PID` – Stop a running process
-- `kill -CONT PID` – Resume a stopped process
+- `kill -CONT PID` – Resume a stopped process.
+ 
 Developer asks DevOps Engineer - Can you share the Thread Dumps of the Process (Threads are all the internal sub-processes of the Java Application) i.e. the logs ?
  - `kill -3 PID` – To get the Thread Dumps (especially for Java Applications) 
 
 - `renice -n 10 -p PID` – Lower priority of a process
-- `renice -n -5 -p PID` – Increase priority of a process (requires root)
+- `renice -n -5 -p PID` – Increase priority of a process (requires root).
 Use the renice commands very carefully, only if you are confident and fully aware of the running Applications and the Server.
 Using renice commands, the priority of the CPU processes is set from -20 to 19, where -20 is the highest priority and 19 is the lowest priority. So, in the above commands, 10 will lower the priority and -5 will increase the priority.
 
@@ -58,6 +59,7 @@ Using renice commands, the priority of the CPU processes is set from -20 to 19, 
 - `htop` – User-friendly process viewer (requires installation)
 - `nice -n 10 command` – Run a command with a specific priority
 - `renice -n -5 -p PID` – Change priority of an existing process
+
 
 There are special processes on the Linux servers known as services. They are background running processes which start at the time of booting of the server. If your Linux server goes down, the processes (like Python application) that you're running will obviously go down and it doesn't automatically start, Whereas services (like web server) are special kind of process which runs in background and when your server goes down, during the restart of your server, these services come up automatically.
 
