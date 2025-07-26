@@ -60,10 +60,9 @@ Using renice commands, the priority of the CPU processes is set from -20 to 19, 
 - `nice -n 10 command` – Run a command with a specific priority
 - `renice -n -5 -p PID` – Change priority of an existing process
 
-
+### Daemon Process Management
 There are special processes on the Linux servers known as services. They are background running processes which start at the time of booting of the server. If your Linux server goes down, the processes (like Python application) that you're running will obviously go down and it doesn't automatically start, Whereas services (like web server) are special kind of process which runs in background and when your server goes down, during the restart of your server, these services come up automatically.
 
-### Daemon Process Management
 - `systemctl list-units --type=service` – List all system daemons/services
 - `systemctl start service-name` – Start a daemon/service
 - `systemctl stop service-name` – Stop a daemon/service
