@@ -6,14 +6,17 @@ Monitoring system resources is essential to ensure optimal performance, detect i
 ## Index of Commands Covered
 
 ### CPU and Memory Monitoring
-- `top` – Real-time system monitoring
+- `top` – Real-time system monitoring (cannot be used inside Scripts)
 - `htop` – Interactive process viewer (requires installation)
 - `vmstat` – Report system performance statistics
-- `free -m` – Show memory usage
+- `free -m` – Show memory usage (can be used inside Scripts)
+- 'free -h` – Show memory usage in human readable form
+- 'nproc' – shows the number of CPUs on the machine
 
 ### Disk Monitoring
 - `df -h` – Check disk space usage
 - `du -sh /path` – Show disk usage of a specific directory
+- `du -sh *` – Show disk usage of all files in a directory
 - `iostat` – Display CPU and disk I/O statistics
 
 ### Network Monitoring
@@ -29,6 +32,10 @@ Monitoring system resources is essential to ensure optimal performance, detect i
 - `tail -f /var/log/syslog` – Live monitoring of system logs
 - `journalctl -f` – Live system logs for systemd-based distros
 - `dmesg | tail` – View kernel logs
+
+
+We can even integrate Linux servers with monitoring tools like Prometheus and Grafana. The monitoring commands can be used for basic system monitoring checks. For advanced monitoring capabilities, we need to use Monitoring tools. Prometheus can be used for scrapping the metrics and logs from the linux system. Grafana can be used to create visual Dashboard to view the metrics and logs in real time and it can also be used to create alerting system.
+
 
 ## CPU and Memory Monitoring
 ### Using `top`
