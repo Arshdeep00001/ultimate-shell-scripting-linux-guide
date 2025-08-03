@@ -34,7 +34,7 @@ Monitoring system resources is essential to ensure optimal performance, detect i
 - `dmesg | tail` – View kernel logs
 
 
-We can even integrate Linux servers with monitoring tools like Prometheus and Grafana. The monitoring commands can be used for basic system monitoring checks. For advanced monitoring capabilities, we need to use Monitoring tools. Prometheus can be used for scrapping the metrics and logs from the linux system. Grafana can be used to create visual Dashboard to view the metrics and logs in real time and it can also be used to create alerting system.
+We can even integrate Linux servers with monitoring tools like Prometheus and Grafana. The monitoring commands can be used for basic system monitoring checks or quick troubleshooting. For advanced monitoring capabilities, we need to use Monitoring tools. Prometheus can be used for scrapping the metrics and logs from the linux system (by using tools like Node exporter or Linux metrics exporter) and sends the information to Grafana. Grafana can be used to create visual Dashboard to view the metrics and logs in real time and it is also used to send alerts using email notification or Slack notification.
 
 
 ## CPU and Memory Monitoring
