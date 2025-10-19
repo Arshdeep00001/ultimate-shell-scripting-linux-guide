@@ -9,6 +9,8 @@ Key files involved in user management:
 - `/etc/group` – Stores group information.
 - `/etc/gshadow` – Stores secure group details.
 
+- Goto etc folder and do 'cat passwd' or 'cat group' to see all the user or group details.
+
 ## Creating Users in Linux
 To create a new user in Linux, use:
 
@@ -52,6 +54,27 @@ passwd username
 ```bash
 su - username
 ```
+
+or
+```bash
+su username
+```
+(The primary difference between su - username and su username lies in how they manage the environment variables and the type of shell they initiate.
+su - username (or su --login username):
+- Login Shell: This command initiates a login shell for the specified username. This means it simulates a full login by the user. 
+- Environment Reset: It resets the environment variables to those defined for the target user, as if they had logged in directly. This includes setting PATH, HOME, SHELL, USER, LOGNAME, and others to the values configured for username.
+- Profile Execution: It executes the target user's login scripts (e.g., .bash_profile, .profile, .login), ensuring that all custom settings and configurations for that user are loaded.
+- Working Directory: The working directory typically changes to the target user's home directory.
+
+su username (without the hyphen):
+- Non-Login Shell: This command initiates a non-login shell for the specified username.
+- Environment Preservation: It switches to the specified user's identity but largely preserves the environment variables of the original user who executed the su command. This means PATH, HOME, and other variables might still reflect the original user's settings.
+- No Profile Execution: It generally does not execute the target user's login scripts, so any custom settings defined in those scripts might not be applied.
+-  Working Directory: The working directory typically remains the same as the directory from which the su command was executed.
+
+In essence:
+- Use su - username when you want a clean, isolated environment that fully reflects the target user's settings, similar to a fresh login. This is generally recommended for security and consistency.
+- Use su username when you want to temporarily perform actions as another user while retaining aspects of your current environment, such as the working directory or specific environment variables. This can be less secure as it might inherit potentially undesirable environment settings from the original user.)
 
 ### Enforcing Password Policies
 - **Password expiration**: Set password expiry days
