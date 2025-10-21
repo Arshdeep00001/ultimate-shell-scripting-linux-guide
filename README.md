@@ -1,6 +1,6 @@
-# Ultimate Linux Guide
+# Ultimate Shell Scripting & Linux Guide
 
-This repository is created to serve as a revision notes for the YouTube course created by **Abhishek Veeramalla**(`iam-veeramalla` on GitHub) on his youtube channel - `Abhishek.Veeramalla`.
+This repository is created to serve as a revision notes for the YouTube course created by **Abhishek Veeramalla**(`iam-veeramalla` on GitHub) on his youtube channel - `Abhishek.Veeramalla`and also added more information wherever required.
 
 Following topics are covered as part of the course and documentation.
 
@@ -17,5 +17,8 @@ Following topics are covered as part of the course and documentation.
 - Linux system monitoring
 - Basic Networking in Linux
 - Disk and Storage management in Linux
+- Shell Scripting
+- Interview Questions
+- Projects
 
 Please refer to the folders at the root level of this repository to go through the documentation. 
